@@ -1,1 +1,354 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+    AgriFund - A platform for farmers to get funds for their farming activities
+    </title>
+    <meta name="description" content="Simple landind page" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #044d0d 0%, #0afd57 100%);
+      }
+    </style>
+  </head>
+  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div class="pl-4 flex items-center">
+          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+            <!--Icon from: http://www.potlabicons.com/ -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40">
+                <path fill="#8CB249" d="M40.2 62.7c-1.6-2.1-4.3-3.5-7.2-3.5-3 0-5.6 1.4-7.3 3.6-1.2-2-3.2-3.6-5.3-4.7 1.4-1.4 2.3-3.3 2.3-5.3 0-1-.2-2-3-4.5-2.3 1.7-5.7 3.7-10.2 4.9-2.1.5-4.4.8-6.8.8-2.4 0-4.7-.3-6.8-.8-4.5-1.2-8-3.2-10.2-4.9-2.8 2.5-3 3.5-3 4.4 0 2 .9 3.9 2.3 5.3-2.1 1.1-4.1 2.8-5.3 4.7-1.7-2.2-4.3-3.6-7.3-3.6-2.9 0-5.6 1.4-7.2 3.5C1 60.1 0 58.1 0 56c1.1 0 2.2.2 3.2.7C6.7 56 7.7 56 8 56c1 0 2 0 3-.1 0-2.1 2-4.2 5.6-5.7-.2-.4-.4-.8-.5-1.3-1.3-4.3 1-7.7 2.1-9 0 0 1-.1 3-.1 2 0 3 .1 3 .1 1.1 1.3 3.3 4.7 2.1 9-.1.4-.3.9-.5 1.3 3.5 1.5 5.5 3.6 5.6 5.7 1 0 2 .1 3 .1.3 0 1.3 0 2-.3 1-.6 2.1-.8 3.1-.8 1.1 0 2.1.2 3.2.7 1.1-1.1 2.2-1.7 3.2-1.7 0 2.1-1 4.1-4 6.7z"/>
+                <path fill="#BFDB73" d="M32 33.1c-9.7 0-17.6 7.9-17.6 17.6 0 2 .3 4 1 5.9-5.5-2.2-9.6-7.4-9.6-13.5 0-7.8 6.4-14.2 14.2-14.2 2.4 0 4.6.6 6.6 1.6 2.3-1.3 5-2.4 8-2.9-.7-1.8-1-3.7-1-5.6 0-9.7 7.9-17.6 17.6-17.6 3.6 0 6.9 1.1 9.7 2.9 2.3-1.6 4.9-2.9 7.6-3.8-.5-2.5-2.9-4.3-5.7-4.3-1.7 0-3.2.7-4.4 1.9-1.3-1.3-3.1-2.1-5.2-2.1-3.3 0-6.1 2.7-6.1 6.1 0 .8.2 1.6.6 2.3-2.6 1.1-4.7 3.3-5.7 6z"/>
+              </svg>
+            AGRIFUND
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#features">Features</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#about">About</a>
+            </li>
+            
+          </ul>
+          <a href="https://lekakenycollins8.pythonanywhere.com/" target="_blank">
+            <button
+                id="navAction"
+                class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Navigate to AgriFund
+            </button>
+          </a>
+        </div>
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+    <!--Hero-->
+    <div class="pt-24">
+      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <!--Left Col-->
+        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+          <p class="uppercase tracking-loose w-full">The AgriFund Web Platform proves an online marketplace connecting small farmers and investors</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">
+            Grow your farming business with AgriFund
+          </h1>
+          <p class="leading-normal text-2xl mb-8">
+            This platform streamlines the process of securing funding for agricultural projects, enabling farmers to apply for loans and investors to find lucrative investment opportunities
+          </p>
+          
+        </div>
+        <!--Right Col-->
+        <div class="w-0 md:w-3/5 py-8 space-x-1.5 text-center">
+          <img class="w-0 md:w-2/4 rounded-md object-right z-50" src="thrive.jpeg" />
+        </div>
+      </div>
+    </div>
+    <div class="relative -mt-12 lg:-mt-24">
+      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"
+            ></path>
+            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+          </g>
+          <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path
+              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <section id="features" class="bg-white border-b py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Features
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Project Listings
+            </h3>
+            <p class="text-gray-600 mb-8">
+                View all agribusiness projects listed on the platform.
+              <br />
+              <br />
+                This where the investor browses through a list of projects and selects the one they would like to invest in.
+            </p>
+          </div>
+          <div class="w-full sm:w-1/2 p-6">
+            <img class="w-0 md:w-4/5 rounded-md object-right z-50" src="listings.png" />
+          </div>
+        </div>
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <img class="w-0 md:w-4/5 rounded-md object-right z-50" src="create.png" />
+          </div>
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <div class="align-middle">
+              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+                Create agribusiness project
+              </h3>
+              <p class="text-gray-600 mb-8">
+                Fill form to create new projects
+                <br />
+                <br />
+                Farmers are able to create new farming projects that they wish to secure funding through investor interests                
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+            <div class="w-5/6 sm:w-1/2 p-6">
+              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+                Express Interest
+              </h3>
+              <p class="text-gray-600 mb-8">
+                  Investor fills form to express interest in a project
+                <br />
+                <br />
+                  This is where the investor looks at the project details and decides to express interest in the project. The details are then sent to the farmer to enhance offline communication.
+              </p>
+            </div>
+            <div class="w-full sm:w-1/2 p-6">
+              <img class="w-0 md:w-4/5 rounded-md object-right z-50" src="interest.png" />
+            </div>
+          </div>
+      </div>
+    </section>
+    <section id="about" class="bg-white border-b py-8">
+      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          About
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              INSPIRATION BEHIND THE PLATFORM
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Growth of the idea
+              </div>
+              <p class="text-gray-800 text-base px-6 mb-5">
+                AgriFund was inspired by a need to connect small farmers to investors. Many farmers may lack the necessary funding to expand their farming activities. I was talking to a colleague friend who is an entrepreneur and peer at Holberton school, and he mentioned that he had a agribusiness project that he wanted to start but lacked the necessary funds. This is when I thought of creating a platform that would connect farmers to investors. The farmers would be able to post projects which would land in the hands of investors who are willing to Fund. This would be a win-win situation for both parties as investors find low-risk investment opportunities in agribusiness while farmers get the funding to expand their farming activities.
+
+                <br><br>
+                The platform is still in its early stages and I am looking forward to adding more features to it. I am also looking forward to collaborating with other developers to make the platform a success.<br>
+                The project was also a fullfillment of Portfolio project requirement at Holberton School. <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="https://www.github.com/lekakenycollins8/AgriFund_Web_Platform" target="_blank"><button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    AgriFund
+                  </button></a>
+              </p>
+            
+          </div>
+          
+    </section>
+    <!-- Change the colour #f8fafc to match the previous section colour -->
+    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+          <g class="wave" fill="#f8fafc">
+            <path
+              d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
+            ></path>
+          </g>
+          <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+            <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+              <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+              <path
+                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                opacity="0.100000001"
+              ></path>
+              <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <section class="container mx-auto text-center py-6 mb-12">
+      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+        Feel free to reach out
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+        <p class="my-4 text-3xl leading-tight">
+            If you have any questions or would like to collaborate, offer me a job, feel free to reach out to me. I am always open to new opportunities.
+        </p><br>
+        <p>Click on the icons and it will lead you to my socials</p><br><br>
+            <div class="grid grid-cols-5 gap-5">
+                <div class="text-center"><a href="https://www.github.com/lekakenycollins8"><svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.17 6.839 9.485.5.092.682-.218.682-.485 0-.24-.008-.875-.013-1.72-2.782.604-3.37-1.34-3.37-1.34-.454-1.154-1.108-1.46-1.108-1.46-.907-.62.068-.606.068-.606 1.003.07 1.527 1.03 1.527 1.03.89 1.526 2.343 1.086 2.913.83.09-.648.35-1.086.636-1.336-2.23-.254-4.57-1.116-4.57-4.962 0-1.097.39-1.99 1.028-2.69-.103-.253-.446-1.274.096-2.65 0 0 .84-.27 2.75 1.025.8-.223 1.654-.335 2.504-.338.848.003 1.702.115 2.504.338 1.91-1.295 2.747-1.025 2.747-1.025.544 1.376.2 2.397.097 2.65.64.7 1.027 1.593 1.027 2.69 0 3.855-2.345 4.705-4.582 4.954.36.308.682.92.682 1.854 0 1.338-.012 2.417-.012 2.74 0 .27.18.584.688.484C17.14 18.168 20 14.418 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/>
+                  </svg></a></div>
+                <!-- ... -->
+                <div><a href="https://www.x.com/leky_reborn"><svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                    <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                  </svg></a>
+                </div>
+                <div><a href="https://www.linkedin.com/in/lekakenycollins8"><svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                    <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                  </svg></a>
+                </div>
+                <div><a href="https://www.reddit.com/user/Its_Leky/"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512" width="24" height="24">
+                    
+                    <path d="M373 138.6c-25.2 0-46.3-17.5-51.9-41l0 0c-30.6 4.3-54.2 30.7-54.2 62.4l0 .2c47.4 1.8 90.6 15.1 124.9 36.3c12.6-9.7 28.4-15.5 45.5-15.5c41.3 0 74.7 33.4 74.7 74.7c0 29.8-17.4 55.5-42.7 67.5c-2.4 86.8-97 156.6-213.2 156.6S45.5 410.1 43 323.4C17.6 311.5 0 285.7 0 255.7c0-41.3 33.4-74.7 74.7-74.7c17.2 0 33 5.8 45.7 15.6c34-21.1 76.8-34.4 123.7-36.4l0-.3c0-44.3 33.7-80.9 76.8-85.5C325.8 50.2 347.2 32 373 32c29.4 0 53.3 23.9 53.3 53.3s-23.9 53.3-53.3 53.3zM157.5 255.3c-20.9 0-38.9 20.8-40.2 47.9s17.1 38.1 38 38.1s36.6-9.8 37.8-36.9s-14.7-49.1-35.7-49.1zM395 303.1c-1.2-27.1-19.2-47.9-40.2-47.9s-36.9 22-35.7 49.1c1.2 27.1 16.9 36.9 37.8 36.9s39.3-11 38-38.1zm-60.1 70.8c1.5-3.6-1-7.7-4.9-8.1c-23-2.3-47.9-3.6-73.8-3.6s-50.8 1.3-73.8 3.6c-3.9 .4-6.4 4.5-4.9 8.1c12.9 30.8 43.3 52.4 78.7 52.4s65.8-21.6 78.7-52.4z"/>
+                  </svg></a>
+                </div>
+                <div><a href="htts://www.discord.com/lekakenycollins999"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="24" height="24">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z" />
+                </svg></a>
+                </div>
+                
+            </div>
+      
+      
+    </section>
+    <!--Footer-->
+    <footer class="bg-white">
+      <div class="container mx-auto px-8">
+        
+          <div class="flex-1 mb-6 text-black">
+            <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+              AGRIFUND
+            </a>
+          </div>
+          
+           
+    </footer>
+    <!-- jQuery if you need it
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  -->
+    <script>
+      var scrollpos = window.scrollY;
+      var header = document.getElementById("header");
+      var navcontent = document.getElementById("nav-content");
+      var navaction = document.getElementById("navAction");
+      var brandname = document.getElementById("brandname");
+      var toToggle = document.querySelectorAll(".toggleColour");
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          header.classList.add("bg-white");
+          navaction.classList.remove("bg-white");
+          navaction.classList.add("gradient");
+          navaction.classList.remove("text-gray-800");
+          navaction.classList.add("text-white");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-800");
+            toToggle[i].classList.remove("text-white");
+          }
+          header.classList.add("shadow");
+          navcontent.classList.remove("bg-gray-100");
+          navcontent.classList.add("bg-white");
+        } else {
+          header.classList.remove("bg-white");
+          navaction.classList.remove("gradient");
+          navaction.classList.add("bg-white");
+          navaction.classList.remove("text-white");
+          navaction.classList.add("text-gray-800");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-800");
+          }
+
+          header.classList.remove("shadow");
+          navcontent.classList.remove("bg-white");
+          navcontent.classList.add("bg-gray-100");
+        }
+      });
+    </script>
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
